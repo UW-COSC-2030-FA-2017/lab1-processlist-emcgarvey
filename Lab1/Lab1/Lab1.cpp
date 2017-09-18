@@ -11,6 +11,11 @@ int main()
 	cout << "Enter a file name: ";
 	cin >> file;
 	ifstream inFile(file);
+	if (!inFile)
+	{
+		cout << "File not found" << endl;
+		return 0;
+	}
 	double current = NULL;
 	double first = NULL;
 	double second = NULL;
@@ -23,7 +28,7 @@ int main()
 		{
 			first = current;
 		}
-		if (counter == 1) //stores the current character as 'second'on the second iteration
+		if (counter == 1) //stores the current character as 'second' on the second iteration
 		{
 			second = current;
 		}
