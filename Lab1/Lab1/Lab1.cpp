@@ -24,11 +24,12 @@ int main()
 	int counter = 0;
 	while (inFile>>current && !inFile.fail()) // this file i/o operation is equivalent to checking .fail()
 	{ 
-		if (counter == 0) //stores the current character as 'first' on the first iteration
+		counter++;
+		if (counter == 1) //stores the current character as 'first' on the first iteration
 		{
 			first = current;
 		}
-		if (counter == 1) //stores the current character as 'second' on the second iteration
+		if (counter == 2) //stores the current character as 'second' on the second iteration
 		{
 			second = current;
 		}
@@ -37,7 +38,7 @@ int main()
 			beforelast = last;
 		}
 		last = current;
-		counter++; // counts the number of times through the loop
+		// counts the number of times through the loop
 	}
 	inFile.close();
 	cout << "Number of numbers: " << counter << endl;
