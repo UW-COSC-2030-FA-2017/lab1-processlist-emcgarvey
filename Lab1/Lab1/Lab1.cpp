@@ -11,7 +11,7 @@ int main()
 	cout << "Enter a file name: ";
 	cin >> file;
 	ifstream inFile(file);
-	if (!inFile)
+	if (!inFile) // File name validation
 	{
 		cout << "File not found" << endl;
 		return 0;
@@ -45,4 +45,3 @@ int main()
 	cout << "First two: " << first << ", " << second << endl;
 	cout << "Last two: " << beforelast << ", " << last << endl;
 }
-
